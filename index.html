@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Art Converter with Grid and Download</title>
+    <style>
+        #canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pixel Art Converter with Zoom, Grid, and Download</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <label for="resolution">Pixel Art Resolution:</label>
+    <select id="resolution">
+        <option value="16">16x16</option>
+        <option value="32">32x32</option>
+        <option value="64">64x64</option>
+        <option value="128">128x128</option>
+        <option value="256">256x256</option>
+    </select>
+    <button id="convertButton">Convert to Pixel Art</button>
+
+    <br>
+
+    <label for="showGrid">Show Grid:</label>
+    <input type="checkbox" id="showGrid" checked>
+
+    <br>
+
+    <label for="downloadSize">Download Size:</label>
+    <select id="downloadSize">
+        <option value="320">320x320</option>
+        <option value="640">640x640</option>
+        <option value="1280">1280x1280</option>
+    </select>
+    <button id="downloadButton">Download Image</button>
+
+    <br>
+
+    <canvas id="canvas" width="640" height="640"></canvas>
+
+    <!-- Load pica.js for resizing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pica/7.0.1/pica.min.js"></script>
+
+    <!-- Load Color Thief for palette extraction -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
